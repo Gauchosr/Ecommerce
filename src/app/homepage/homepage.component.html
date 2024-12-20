@@ -13,6 +13,16 @@
                     </svg>
                     <span class="badge bg-secondary">{{ carrCont }}</span>
                 </button>
+                    
+                <button class="btn btn-outline-light" routerLink="/login" *ngIf="!loggato">
+                    Login
+                </button>
+                  
+                  <div *ngIf="loggato">
+                    <span class="btn btn-outline-light">
+                      {{nome}} {{cognome}}
+                    </span>
+                  </div>
             </div>
         </div>
     </nav>
@@ -25,3 +35,5 @@
 
     </div>
 </div>
+
+
